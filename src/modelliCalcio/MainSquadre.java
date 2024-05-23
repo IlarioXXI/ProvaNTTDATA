@@ -27,9 +27,11 @@ public class MainSquadre {
         squadra.allenatore = allenatore;
 
         squadra.budget = 10000000;
-        squadra.add(calciatore,9);
-        squadra.add(calciatore1,2);
+        squadra.add(calciatore);
+        squadra1.add(calciatore1);
 
+        System.out.println(squadra);
+        System.out.println(squadra1);
 
         PartitaDiCalcio partita = new PartitaDiCalcio(squadra,"io",squadra1);
         System.out.println(partita);

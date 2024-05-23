@@ -1,5 +1,7 @@
 package modelliCalcio;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Squadra {
@@ -10,28 +12,20 @@ public class Squadra {
     public double sommaStipendi;
     public int punti;
     public int goal;
-    public Calciatore[] calciatori;
+    public ArrayList<Calciatore> calciatori;
     public Allenatore allenatore;
-    private int calciatoriInSquadra;
 
     public Squadra(String nome, int annoDiFondazione,String sede) {
         this.nome = nome;
         this.annoDiFondazione = annoDiFondazione;
         this.sede = sede;
-        calciatori = new Calciatore[11];
-        calciatoriInSquadra =0;
+        calciatori = new ArrayList<>();
         allenatore = new Allenatore();
     }
     public Squadra(){}
 
     public void add(Calciatore calciatore) {
-            calciatori[calciatoriInSquadra] = calciatore;
-            calciatoriInSquadra++;
-    }
-
-    public void add(Calciatore calciatore, int i){
-        calciatori[i] = calciatore;
-        calcolaSommaStipendi(calciatore.stipendi);
+            calciatori.add(calciatore);
     }
 
 
@@ -60,8 +54,8 @@ public class Squadra {
                 ", sommaStipendi=" + sommaStipendi +
                 ", punti=" + punti +
                 ", goal=" + goal +
-                ", calciatori=" + Arrays.toString(calciatori) +
-                 allenatore +
+                ", calciatori=" + calciatori +
+                ", allenatore=" + allenatore +
                 '}';
     }
 }
