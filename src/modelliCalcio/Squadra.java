@@ -28,11 +28,12 @@ public class Squadra {
             calciatori.add(calciatore);
     }
 
-
-
-    private void calcolaSommaStipendi(double stipendi){
-                sommaStipendi += stipendi;
-
+    public float calcolaSommaStipendi(){
+        float sommaStipendi=0;
+                for (Calciatore calciatore : calciatori){
+                    sommaStipendi+= calciatore.stipendi;
+                }
+                return sommaStipendi;
     }
 
     public void aggiungiGoal(int nuoviGoalDaAggiungere) {

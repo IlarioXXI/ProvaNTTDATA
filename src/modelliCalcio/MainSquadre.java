@@ -49,10 +49,7 @@ public class MainSquadre {
         System.out.println(persona);
 
         System.out.println(allenatore);
-
-
-
-
+        System.out.println(squadra.calcolaSommaStipendi());
 
 
     }
